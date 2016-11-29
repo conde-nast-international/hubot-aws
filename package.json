@@ -1,5 +1,5 @@
 {
-  "name": "hubot-aws",
+  "name": "shy-hubot-aws",
   "version": "0.5.0",
   "description": "Hubot masters aws commands",
   "repository": {
@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/yoheimuta/hubot-aws/issues"
   },
-  "author": "yoheimuta <yoheimuta@gmail.com>",
+  "author": "msmichellegar <msmichellegar@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "coffee-errors": "^0.8.6",
