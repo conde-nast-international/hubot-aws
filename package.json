@@ -1,6 +1,6 @@
 {
   "name": "hubot-aws-sns",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Hubot AWS commands for SNS only",
   "repository": {
     "type": "git",

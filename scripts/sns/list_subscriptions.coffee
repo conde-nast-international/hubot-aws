@@ -1,8 +1,6 @@
 # Description:
 #   List sns subscriptions
 #
-# Commands:
-#   hubot sns list subscriptions
 
 module.exports = (robot) ->
   robot.respond /sns list subscriptions$/i, (msg) ->

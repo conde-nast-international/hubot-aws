@@ -1,8 +1,6 @@
 # Description:
 #   List sns topics
 #
-# Commands:
-#   hubot sns list topics
 
 moment = require 'moment'
 tsv    = require 'tsv'

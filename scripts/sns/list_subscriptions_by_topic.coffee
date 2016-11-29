@@ -1,8 +1,6 @@
 # Description:
 #   List sns subscriptions by topic
 #
-# Commands:
-#   hubot sns list subscriptions in topic arn:aws...
 
 module.exports = (robot) ->
 

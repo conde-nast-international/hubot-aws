@@ -1,8 +1,6 @@
 # Description:
 #   Publish a message to SNS
 #
-# Commands:
-#   hubot sns publish {message} to {message}
 
 module.exports = (robot) ->
   robot.respond /sns publish (.*) to (.*)/i, (msg) ->
