@@ -1,10 +1,10 @@
 {
-  "name": "shy-hubot-aws",
-  "version": "0.5.0",
-  "description": "Hubot masters aws commands",
+  "name": "hubot-aws-sns",
+  "version": "0.5.1",
+  "description": "Hubot AWS commands for SNS only",
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/yoheimuta/hubot-aws.git"
+    "url": "ssh://git@github.com/conde-nast-international/hubot-aws-sns.git"
   },
   "main": "index.coffee",
   "scripts": {
@@ -27,7 +27,7 @@
     "aws-cli"
   ],
   "bugs": {
-    "url": "https://github.com/yoheimuta/hubot-aws/issues"
+    "url": "https://github.com/conde-nast-international/hubot-aws-sns/issues"
   },
   "author": "msmichellegar <msmichellegar@gmail.com>",
   "license": "MIT",
