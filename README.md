@@ -1,6 +1,72 @@
-# hubot-aws  [![npm version](https://badge.fury.io/js/hubot-aws.svg)](http://badge.fury.io/js/hubot-aws) [![Build Status](https://travis-ci.org/yoheimuta/hubot-aws.svg?branch=master)](https://travis-ci.org/yoheimuta/hubot-aws) [![Dependency Status](https://david-dm.org/yoheimuta/hubot-aws.svg)](https://david-dm.org/yoheimuta/hubot-aws)
+# Hubot AWS for SNS only.
 
-Hubot masters aws commands
+This is a fork of the original [hubot-aws](https://github.com/yoheimuta/hubot-aws) plugin only containing the SNS-related functionality.
+
+## Installation
+
+Add **hubot-aws-sns** to your `package.json` file:
+
+```
+npm install --save hubot-aws-sns
+```
+
+Add **hubot-aws-sns** to your `external-scripts.json`:
+
+```json
+["hubot-aws-sns"]
+```
+
+Run `npm install`
+
+## Auth
+
+Access Control with [hubot-auth](https://github.com/hubot-scripts/hubot-auth).
+
+- User with `admin` or the role defined `HUBOT_AWS_CAN_ACCESS_ROLE` can run all commands.
+
+```ruby
+# against user without a valid role
+hubot> hubot sns 
+You cannot access this feature. Please contact an admin.
+```
+
+- You can disable access control like below.
+
+```ruby
+export HUBOT_AWS_DEBUG="1"
+```
+
+## Commands
+
+See [scripts/sns/**.coffee](https://github.com/conde-nast-international/hubot-aws-sns/tree/master/scripts) for full documentation.
+
+Note: these SNS commands are not documented in `hubot help` as we wanted to hide the functionality in chat, and keep the output of help to a slim, less-verbose, amount.
+
+```ruby
+hubot sns list topics
+hubot sns list subscriptions
+hubot sns list subscription in [topicArn]
+hubot sns publish [message] to [topicArn]
+```
+
+## Configurations
+
+Set environment variables like an example below.
+
+```ruby
+# required
+export HUBOT_AWS_ACCESS_KEY_ID="ACCESS_KEY"
+export HUBOT_AWS_SECRET_ACCESS_KEY="SECRET_ACCESS_KEY"
+export HUBOT_AWS_REGION="ap-northeast-1"
+# required when used
+export HUBOT_AWS_DEBUG="1"
+export HUBOT_AWS_CAN_ACCESS_ROLE="tech"
+```
+
+You can build your own configurations by referring to the [example files](https://github.com/conde-nast-international/hubot-aws/tree/master/example).
+
+
+## Original README follows
 
 I wrote a guest blog published by PacktPub about a quick intro to this npm module.
 See https://www.packtpub.com/books/content/part2-chatops-slack-and-aws-cli.
